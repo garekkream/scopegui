@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui uitools
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -13,8 +13,17 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    info.cpp \
+    connection.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    info.h \
+    connection.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    info.ui \
+    connection.ui
+
+RESOURCES += \
+    resources.qrc

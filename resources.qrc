@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/forms">
+        <file>info.ui</file>
+        <file>connection.ui</file>
+    </qresource>
+</RCC>

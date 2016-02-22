@@ -17,6 +17,8 @@ public:
 
 private:
     Ui::MainWindow *ui;
+
+    void addUiWidget(const char *uiFile, QString name);
 };
 
 #endif // MAINWINDOW_H
