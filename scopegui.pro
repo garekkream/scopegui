@@ -4,13 +4,17 @@
 #
 #-------------------------------------------------
 
-QT       += core gui uitools
+QT       += core gui uitools network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = scopegui
 TEMPLATE = app
 
+VERSION = $$system(git describe --tags)
+isEmpty(VERSION) {
+    VERSION=$${VERSION}
+}
 
 SOURCES += main.cpp\
         mainwindow.cpp \
@@ -27,3 +31,16 @@ FORMS    += mainwindow.ui \
 
 RESOURCES += \
     resources.qrc
+
+LIBS += -lprotobuf
+
+include(protobuf.pri)
+PROTOS += scopeproto/scope_msg_request.proto \
+          scopeproto/scope_msg_response.proto
+
+VERSTR = '\\"$${VERSION}\\"'
+DEFINES += VER=\"$${VERSTR}\"
+
+DISTFILES += \
+    protobuf.pri
+

@@ -3,6 +3,9 @@
 
 #include <QMainWindow>
 
+#include "connection.h"
+#include "info.h"
+
 namespace Ui {
 class MainWindow;
 }
@@ -18,7 +21,8 @@ public:
 private:
     Ui::MainWindow *ui;
 
-    void addUiWidget(const char *uiFile, QString name);
+    Info *infoWidget;
+    Connection *connectionWidget;
 };
 
 #endif // MAINWINDOW_H
