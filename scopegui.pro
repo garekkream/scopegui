@@ -40,7 +40,3 @@ PROTOS += scopeproto/scope_msg_request.proto \
 
 VERSTR = '\\"$${VERSION}\\"'
 DEFINES += VER=\"$${VERSTR}\"
-
-DISTFILES += \
-    protobuf.pri
-

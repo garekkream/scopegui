@@ -147,45 +147,87 @@
             </rect>
            </property>
            <layout class="QGridLayout" name="gridLayout">
-            <item row="0" column="0">
-             <widget class="QLabel" name="labelSWVer">
+            <item row="1" column="0">
+             <widget class="QLabel" name="labelClientIP">
+              <property name="text">
+               <string>Client IP:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <widget class="QLabel" name="labelServerIP_val">
+              <property name="text">
+               <string>Unknown</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLabel" name="labelServerSWVer">
               <property name="text">
                <string>Server SW version:</string>
               </property>
              </widget>
             </item>
-            <item row="2" column="0">
+            <item row="5" column="0">
              <widget class="QLabel" name="labelStatus">
               <property name="text">
                <string>Server status:</string>
               </property>
              </widget>
             </item>
-            <item row="1" column="0">
-             <widget class="QLabel" name="labelIP_2">
+            <item row="5" column="1">
+             <widget class="QLabel" name="labelStatus_val">
               <property name="text">
-               <string>Server IP:</string>
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#ff0000;&quot;&gt;DISCONNECTED&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
              </widget>
             </item>
             <item row="0" column="1">
-             <widget class="QLabel" name="labelSWVer_val">
+             <widget class="QLabel" name="labelClientSWVer_val">
               <property name="text">
                <string>Unknown</string>
               </property>
              </widget>
             </item>
             <item row="1" column="1">
-             <widget class="QLabel" name="labelIP_val">
+             <widget class="QLabel" name="labelClientIP_val">
               <property name="text">
                <string>Unknown</string>
               </property>
              </widget>
             </item>
-            <item row="2" column="1">
-             <widget class="QLabel" name="labelStatus_val">
+            <item row="3" column="1">
+             <widget class="QLabel" name="labelServerSWVer_val">
               <property name="text">
-               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#ff0000;&quot;&gt;DISCONNECTED&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               <string>Unknown</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QLabel" name="labelClientSWVer">
+              <property name="text">
+               <string>Client SW version:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="0">
+             <widget class="QLabel" name="labelServerIP">
+              <property name="text">
+               <string>Server IP:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="labelClientDevID">
+              <property name="text">
+               <string>Client Dev ID:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QLabel" name="labelClientDevID_val">
+              <property name="text">
+               <string>Unknown</string>
               </property>
              </widget>
             </item>
