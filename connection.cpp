@@ -31,6 +31,8 @@ Connection::~Connection()
 {
     google::protobuf::ShutdownProtobufLibrary();
 
+    this->socket.close();
+
     delete ui;
 }
 
@@ -91,29 +93,12 @@ void Connection::on_pushConnection_clicked()
 
     send_data(scopeMsgClientReq_scopeMsgIdReq_SCOPE_MSGID_REGISTER_REQ, flags, buffer, size);
 
-    memset(buffer, 0x00, MAX_BUFFER_SIZE);
-
     if(waitForResponse(scopeMsgServerRes_scopeMsgIdRes_SCOPE_MSGID_REGISTER_RES, &response)) {
         setServerConnected(true);
         setConnectionInfo(&response);
     } else {
         QMessageBox::warning(this, "Error!", "No response!");
     }
-
-//    while(this->socket.waitForReadyRead(CLIENT_TIMEOUT_MS)) {
-//        int size = 0;
-//        scopeMsgServerRes response;
-
-//        size = socket.read(buffer, MAX_BUFFER_SIZE - 1);
-//        response.ParseFromArray(buffer, size);
-
-//        if(response.id() == scopeMsgServerRes_scopeMsgIdRes_SCOPE_MSGID_REGISTER_RES) {
-//            setConnectionInfo(&response);
-//            setServerConnected(true);
-//        } else {
-//            QMessageBox::warning(this, "Error!", "Wrong message id!");
-//        }
-//    }
 }
 
 void Connection::on_pushDiscover_clicked()
